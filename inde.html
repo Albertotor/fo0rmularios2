@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-Es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+
+<style>
+label{ 
+    border: 2px solid rgb(75, 18, 18) ;
+background-color: rgb(39, 247, 66);}
+
+input, select{ padding: 5px;}
+
+</style>
+
+</head>
+<body style="background-color: rgb(162, 162, 248);">
+    <h1> Formulario de registro </h1>
+
+    <form action="procesa-registro.php" method="get">
+    <fieldset>
+<legend >
+    Datos personales 
+</legend>
+      
+<p><label for="">Nombre:</label> <input type="text" name="nombre" id="nom" maxlength="5" required placeholder="Escriba su nombre">
+</p>
+<p><label for="">Apellidos:</label> <input type="text" name="Apellidos" id="ape" maxlength="20" placeholder="Escriba sus dos apellidos">
+</p>
+<p><label for="">Contrseña:</label> <input  required type="password" name="contrase" id="contr" maxlength="8" minlength="4"> 
+</p>
+<p><label for="">Hombre:</label> <input type="radio" name="genero" id="hom" value="h"> 
+<label for="">Mujer:</label> <input type="radio" name="genero" id="muj" value="m" checked> 
+</p>
+<p>
+    <label for="">Fumador/a:</label> <input type="checkbox" value="fuma" name="fumador" id="fuma" >
+</p>
+<p><label for="ue">union europea:</label> 
+    <input type="radio" name="une" id="une1" value="ue" checked> 
+    <label for="noue">fuera de la union europea:</label> 
+    <input type="radio" name="une" id="noue" value="une2" > 
+    <label for="amer">america:</label> 
+    <input type="radio" name="une" id="amer" value="une3" > 
+</p>
+</fieldset>
+<fieldset>
+<legend>Datos de la reserva</legend>
+<p>
+<label for="tipo">Provinvia :</label>
+<select name="tipohab" id="tipo" required>
+    <option value="" selected> elija una</option>
+    <option value="1">Toledo</option>
+    <option value="2">Madrid </option>
+    <option value="3">Barcelona</option>
+
+</select>
+</p>
+<p>
+    <p>
+<label for="">observaciones:</label>
+</p>
+<textarea name="obs" id="obs" cols="30" rows="3" placeholder="Indique sus petiviones"></textarea>
+</p>
+<p>
+<p>
+<label for="color">color</label>
+<input type="color" name="color" id="color">
+
+</p>
+
+<label for="">Adjunte foto del DNI</label>
+ <input type="file" name="DNI" id="DNI">
+</p>
+<p>
+<label for="">Fecha de llegada </label>
+<input type="date" name="fecha de llegada" id="fecha de llegada">
+</p>
+<p>
+<label for="">hora de llegada </label>
+<input type="time" name="hora del llegada " id="hora del llegada ">
+</p>
+<p>
+    <p>
+        <p>
+            <label for="">hora y dia de nacimiento</label>
+            <input type="datetime-local" name="hora y dia de nacimiento" id="hora y dia de nacimiento">
+            </p>
+
+    </p>
+    <label for="">Edad  </label>
+    <input type="edad" name="edad" id="edad" max="122" min="0">
+    </p>
+</p>
+<label for="">Email </label>
+<input type="email" name="email" id="email">
+</p>
+
+</fieldset>
+<input style="margin-top: 10px;" type="submit" value="hacer registro">
+<input style="margin-top: 10px;" type="reset" value="reiniciar formulario ">
+
+
+    </form>
+</body>
+</html>
