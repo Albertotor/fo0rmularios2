@@ -8,7 +8,7 @@
 <style>
 label{ 
     border: 2px solid rgb(75, 18, 18) ;
-background-color: rgb(39, 247, 66);}
+background-color: rgb(255, 217, 0);}
 
 input, select{ padding: 5px;}
 
@@ -16,7 +16,7 @@ input, select{ padding: 5px;}
 
 </head>
 <body style="background-color: rgb(162, 162, 248);">
-    <h1> Formulario de registro </h1>
+    <h1> Haga su reserva </h1>
 
     <form action="procesa-registro.php" method="get">
     <fieldset>
@@ -30,11 +30,13 @@ input, select{ padding: 5px;}
 </p>
 <p><label for="">Contrseña:</label> <input  required type="password" name="contrase" id="contr" maxlength="8" minlength="4"> 
 </p>
+<p><label for="">Población:</label> <input   name="Población" id="pobla" value="Alcázar de San Juán" maxlength="50" autofocus> 
+</p> 
 <p><label for="">Hombre:</label> <input type="radio" name="genero" id="hom" value="h"> 
 <label for="">Mujer:</label> <input type="radio" name="genero" id="muj" value="m" checked> 
 </p>
 <p>
-    <label for="">Fumador/a:</label> <input type="checkbox" value="fuma" name="fumador" id="fuma" >
+    <label for="">Fumador/a:</label> <input type="checkbox" value="fuma" name="fumador" id="fuma" checked >
 </p>
 <p><label for="ue">union europea:</label> 
     <input type="radio" name="une" id="une1" value="ue" checked> 
@@ -58,9 +60,9 @@ input, select{ padding: 5px;}
 </p>
 <p>
     <p>
-<label for="">observaciones:</label>
+<label for="">observaciones:</label> <input type="text" value="Esto es solo leer" readonly disabled>
 </p>
-<textarea name="obs" id="obs" cols="30" rows="3" placeholder="Indique sus petiviones"></textarea>
+<textarea name="obs" id="obs"  cols="30" rows="3" placeholder="Indique sus petiviones"></textarea>
 </p>
 <p>
 <p>
@@ -89,7 +91,7 @@ input, select{ padding: 5px;}
 
     </p>
     <label for="">Edad  </label>
-    <input type="edad" name="edad" id="edad" max="122" min="0">
+    <input type="number" name="edad" id="edad" max="122" min="0">
     </p>
 </p>
 <label for="">Email </label>
